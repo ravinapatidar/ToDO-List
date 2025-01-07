@@ -73,3 +73,10 @@ input{
  .active{
      display: flex;
 }
+
+@media (max-width:800px) {
+    input{
+        width: 200px;
+        padding: 5px;
+    } 
+}
