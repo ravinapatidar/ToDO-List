@@ -47,6 +47,9 @@ input{
     font-size: 25px;
     color: #403d39;
 }
+.hidden-input {
+    color: black;
+}
 .edit{
       background-color: #780000;
       color: white;
@@ -73,10 +76,32 @@ input{
  .active{
      display: flex;
 }
+.addList {
+    margin-top: 3rem ;
+    background-color: lightgrey;
+    opacity: 0.3;
+    width:350px;
+    padding: 2px;
+    list-style-type: none;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.addList li {
+    border: 1px solid black;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: #403d39;
+    color: white;
+}
 
 @media (max-width:800px) {
     input{
         width: 200px;
         padding: 5px;
     } 
+    .addList{
+        width: 280px;
+    }
 }

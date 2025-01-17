@@ -6,7 +6,7 @@ let deletTask = document.querySelector(".delet");
 let hiddenContainer = document.querySelector(".hidden-container");
 let addItemList = document.querySelector(".addList");
 let items;
-let i=1;
+
 submitBtn.addEventListener("click",()=>{
     if(input.value === ""){
         alert("Please enter an task!");
@@ -14,25 +14,27 @@ submitBtn.addEventListener("click",()=>{
       }    
      hiddenContainer.classList.add("active");
     taskInput.value = input.value;
-     input.value = "";
+    
     let items = document.createElement('li');
-    items.innerText = `Task ${i++}: ${taskInput.value}`;
+    items.innerText = `Task : ${taskInput.value}`;
     addItemList.appendChild(items);
-
-});
-
-editTask.addEventListener("click",() => {
-         input.value = taskInput.value;
-         items.remove();
-         console.log(items.remove())
+  
+    editTask.addEventListener("click",() => {
+        input.value = taskInput.value;
+        items.remove();
 });
 
 deletTask.addEventListener("click",() => {
-        alert("Are you sure");
-        taskInput.value = "";
-        hiddenContainer.classList.remove("active");
-        items.remove();
-        
+    alert("Are you sure");
+    taskInput.value = "";
+    hiddenContainer.classList.remove("active");
+    items.remove();
 });
+
+    input.value = "";
+});
+
+
+
 
 
